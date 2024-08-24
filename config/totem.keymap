@@ -82,10 +82,10 @@
         nav_layer {
             label = "NAVI";
             bindings = <
-                &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6    &kp N7           &kp N8     &kp N9  &kp N0
-                &trans  &trans  &trans  &trans  &kp LBKT    &kp RBKT  &kp MINUS        &kp EQUAL  &trans  &kp SQT
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &kp LPAR    &kp RPAR  &trans           &trans     &trans  &trans   &kp BACKSLASH
-                                &trans  &trans  &trans      &trans    &kp RIGHT_SHIFT  &trans
+              &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6    &kp N7           &kp N8     &kp N9  &kp N0
+              &trans  &trans  &trans  &trans  &kp LBKT    &kp RBKT  &kp MINUS        &kp EQUAL  &trans  &kp SQT
+&kp CAPSLOCK  &trans  &trans  &trans  &trans  &kp LPAR    &kp RPAR  &trans           &trans     &trans  &trans   &kp BACKSLASH
+                              &trans  &trans  &trans      &trans    &kp RIGHT_SHIFT  &trans
             >;
         };
 
