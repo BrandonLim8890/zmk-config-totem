@@ -62,6 +62,33 @@
         };
     };
 
+    behaviors {
+        lh_mt: lh_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LH_MT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <0>;
+            hold-trigger-key-positions = <5 6 7 8 9 19 31 30 29 18 17 15 16 26 27 35 36 37 28>;
+        };
+
+        rh_mt: rh_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RH_MT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <33 34 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -70,10 +97,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-                    &kp Q        &kp W       &kp E                 &kp R            &kp T      &kp Y      &kp U        &kp I                &kp O       &kp P
-                    &mt LCTRL A  &mt LALT S  &mt LEFT_META D       &mt LSHFT F      &kp G      &kp H      &mt RSHFT J  &mt RIGHT_META K     &mt RALT L  &mt RCTRL SEMICOLON
-&mt LEFT_SHIFT ESC  &kp Z        &kp X       &kp C                 &kp V            &kp B      &kp N      &kp M        &kp COMMA            &kp DOT     &kp FSLH             &kp SQT
-                                             &mt LEFT_META DELETE  &lt 1 BACKSPACE  &kp RET    &kp SPACE  &lt 2 TAB    &mt LEFT_META MINUS
+                    &kp Q           &kp W          &kp E                 &kp R            &kp T      &kp Y      &kp U           &kp I                &kp O          &kp P
+                    &lh_mt LCTRL A  &lh_mt LALT S  &lh_mt LEFT_META D    &lh_mt LSHFT F   &kp G      &kp H      &rh_mt RSHFT J  &rh_mt RIGHT_META K  &rh_mt RALT L  &rh_mt RCTRL SEMICOLON
+&mt LEFT_SHIFT ESC  &kp Z           &kp X          &kp C                 &kp V            &kp B      &kp N      &kp M           &kp COMMA            &kp DOT        &kp FSLH                &kp SQT
+                                                   &mt LEFT_META DELETE  &lt 1 BACKSPACE  &kp RET    &kp SPACE  &lt 2 TAB       &mt LEFT_META MINUS
             >;
         };
 
@@ -82,10 +109,10 @@
         nav_layer {
             label = "NAVI";
             bindings = <
-              &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6    &kp N7           &kp N8     &kp N9  &kp N0
-              &trans  &trans  &trans  &trans  &kp LBKT    &kp RBKT  &kp MINUS        &kp EQUAL  &trans  &kp SQT
-&kp CAPSLOCK  &trans  &trans  &trans  &trans  &kp LPAR    &kp RPAR  &trans           &trans     &trans  &trans   &kp BACKSLASH
-                              &trans  &trans  &trans      &trans    &kp RIGHT_SHIFT  &trans
+                &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6    &kp N7           &kp N8     &kp N9  &kp N0
+                &trans  &trans  &trans  &trans  &kp LBKT    &kp RBKT  &kp MINUS        &kp EQUAL  &trans  &kp SQT
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &kp LPAR    &kp RPAR  &trans           &trans     &trans  &trans   &kp BACKSLASH
+                                &trans  &trans  &trans      &trans    &kp RIGHT_SHIFT  &trans
             >;
         };
 
@@ -94,10 +121,10 @@
         sim_layer {
             label = "SYM";
             bindings = <
-         &kp GRAVE  &kp TILDE  &bt BT_CLR_ALL  &bt BT_SEL 0      &bt BT_SEL 1            &trans      &trans        &trans        &trans     &trans
-         &kp TAB    &trans     &kp C_PREV      &kp C_PLAY_PAUSE  &kp C_NEXT              &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT  &trans
-&kp ESC  &trans     &trans     &trans          &kp C_BRI_DEC     &kp C_BRIGHTNESS_INC    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans     &trans  &trans
-                               &trans          &trans            &trans                  &trans      &trans        &trans
+              &kp GRAVE  &kp TILDE  &bt BT_CLR_ALL  &bt BT_SEL 0      &bt BT_SEL 1            &trans      &trans        &trans        &trans     &trans
+              &kp TAB    &trans     &kp C_PREV      &kp C_PLAY_PAUSE  &kp C_NEXT              &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT  &trans
+&kp CAPSLOCK  &trans     &trans     &trans          &kp C_BRI_DEC     &kp C_BRIGHTNESS_INC    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans     &trans  &trans
+                                    &trans          &trans            &trans                  &trans      &trans        &trans
             >;
         };
 
