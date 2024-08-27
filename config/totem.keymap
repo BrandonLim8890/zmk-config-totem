@@ -28,6 +28,8 @@
     require-prior-idle-ms = <125>;
 };
 
+&lt { flavor = "hold-preferred"; };
+
 / {
     combos {
         compatible = "zmk,combos";
