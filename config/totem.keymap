@@ -108,8 +108,8 @@
             label = "NAVI";
             bindings = <
               &kp N1     &kp N2  &kp N3          &kp N4            &kp N5                  &kp N6                 &kp N7             &kp N8     &kp N9             &kp N0
-              &kp GRAVE  &trans  &kp MINUS       &kp LEFT_BRACKET  &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp RIGHT_BRACKET  &kp EQUAL  &kp SQT            &kp NON_US_BACKSLASH
-&kp CAPSLOCK  &trans     &trans  &kp UNDERSCORE  &trans            &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &trans             &kp PLUS   &kp DOUBLE_QUOTES  &kp PIPE              &trans
+              &kp GRAVE  &trans  &kp MINUS       &kp LEFT_BRACKET  &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp RIGHT_BRACKET  &kp EQUAL  &kp SQT            &kp BACKSLASH
+&kp CAPSLOCK  &trans     &trans  &kp UNDERSCORE  &trans            &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &trans             &kp PLUS   &kp DOUBLE_QUOTES  &kp PIPE       &trans
                                  &trans          &trans            &trans                  &trans                 &trans             &trans
             >;
         };
